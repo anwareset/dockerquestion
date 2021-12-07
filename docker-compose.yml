@@ -1,0 +1,10 @@
+services:
+  redis:
+      image: redis:6-alpine
+
+  app:
+      image: trianwar/hit-counter
+      links:
+      - "redis:redis"
+      ports:
+      - 80:5000
