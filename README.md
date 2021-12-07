@@ -12,23 +12,20 @@ The app is written in Python, using Flask framework
  ### Building/testing steps
 
 Download/pull this repository:
-`git clone https://github.com/anwareset/dockerquestion.git`
+```shell
+git clone https://github.com/anwareset/dockerquestion.git
+```
 
 Go to the newly created directory
-`cd hit-counter`
-
-Build and tag your docker image
-
-`docker build -t hit-counter . `
-
-Make sure to push the image to docker hub:
-`docker push trianwar/hit-counter`
-
-You can test your application and its dependency (Redis) using docker-compose.
-`docker-compose up -d --build`
+```shell
+cd hit-counter
+docker build -t hit-counter .
+docker tag hit-counter trianwar/hit-counter
+docker-compose up -d --build
+```
 
 ### Deployment steps
-We can deploy to the Kubernetes cluster:
+We can deploy to the Kubernetes cluster
  
 #### 1. Manually creating pods
 ```shell
