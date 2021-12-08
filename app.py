@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 app.secret_key = 'BAD_SECRET_KEY'
 app.config['SESSION_TYPE'] = 'redis'
-app.config['SESSION_PERMANENT'] = False
+app.config['SESSION_PERMANENT'] = True
 app.config['SESSION_USE_SIGNER'] = True
 app.config['SESSION_REDIS'] = Redis(host="redis", port=6379)
 app.config.from_object(__name__)

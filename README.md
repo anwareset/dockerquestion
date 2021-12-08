@@ -35,11 +35,13 @@ kubectl apply -f pods_service.yml
 
 #### Cleanup
 To do some cleanup, run the following commands:
-`kubectl delete all`
+```shell
+kubectl delete all
+```
 
 #### 2. Using a _Deployment_ controller
 ```shell
-cd k8s
+cd kubernetes
 kubectl create -f deployments.yml 
 kubectl create -f services.yml 
 ```
@@ -54,5 +56,7 @@ kubectl delete all
 
 ### Scale Up
 Adjust the N number
-`kubectl scale app-deployment deployment --replicas=N`
+```shell
+kubectl scale app-deployment deployment --replicas=N
+```
 Or simply use the HPA.
