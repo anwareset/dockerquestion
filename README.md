@@ -60,3 +60,8 @@ Adjust the N number
 kubectl scale app-deployment deployment --replicas=N
 ```
 Or simply use the HPA.
+
+---
+
+### Note
+This app will need cookie enabled
