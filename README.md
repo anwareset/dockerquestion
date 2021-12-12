@@ -57,7 +57,7 @@ kubectl delete all
 ### Scale Up
 Adjust the N number
 ```shell
-kubectl scale app-deployment deployment --replicas=N
+kubectl scale deployment app-deployment --replicas=N
 ```
 Or simply use the HPA.
 
